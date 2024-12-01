@@ -10,13 +10,11 @@ body{
     font-size: 16px;
     width: 100%;
     height: 100vh;
-    background-color: aquamarine;
-    
 }
 
 header{
     width: 100vw;
-    height: 100px;
+    min-height: 100px;
     background-color: bisque;
 }
 
@@ -38,6 +36,9 @@ main{
     display: flex;
     gap: 20px;
     padding: 50px 10% 50px 10%;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    
 }
 
 .recipe{
@@ -45,8 +46,13 @@ main{
     width: 50%;
     overflow: hidden;
     box-shadow: 0 5px 10px rgb(45 34 60 / 12%);
+    flex: 1 1 calc(50% - 10px);
 }
-
+.cut{
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+}
 .imageCap{
     width: 100%;
 }
@@ -69,8 +75,46 @@ main{
 
 footer{
     background-color: bisque;
+    justify-content: left;
+    display: flex;
+/*     align-items: flex-start; */
+    padding: 50px 23% 50px 23%;
+    column-gap: 10%;
+    flex-wrap: wrap;
+    line-height: 1.9;
 }
 
 #footerLinks{
     list-style: none;
+    font-weight: 700;
+    width: fit-content;
+    color: rgb(32, 27, 27);
+    margin-right: 10%;
+    
+}
+
+.map{
+    width: fit-content;
+}
+
+#footerLinks2{
+    list-style: none;
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-wrap: nowrap;
+    column-gap: 2rem;
+    color: rgb(32, 27, 27);
+}
+
+#signature{
+    width: fit-content;
+    font-style: italic;
+    font-size: 0.8rem;
+    text-wrap: nowrap;
+    color: rgb(160, 131, 97);
+    display: flex;
+    margin-left: auto;
+    align-self: flex-end;
 }

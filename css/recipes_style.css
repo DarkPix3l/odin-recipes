@@ -219,6 +219,7 @@ footer{
     footer{
         line-height: 2.5;
         justify-content: space-around;
+        padding: 80px 45px 80px 45px;
     }
     #footerLinks{
         margin-right: 16px;   
@@ -291,5 +292,4 @@ footer{
     #signature{
         display: none;
     }
-
 }
