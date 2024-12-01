@@ -2,17 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+ /*    border: 1px solid; */
+}
+
+html{
+    font-size: 16px;
+    overflow-x: hidden;
 }
 
 body{
     font-family: 'Trebuchet MS', "Montserrat", Arial, sans-serif;
-    overflow-x: hidden;
-    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 header{
-    width: 100vw;
-    height: 100px;
+    width: 100%;
+    min-height: 100px;
     background-color: bisque;
 }
 
@@ -27,20 +36,21 @@ h1{
 }
 
 main{
-    padding: 50px 10% 50px 10%;
+    max-width: 900px;
+    width: 80%;
+    margin: 40px auto 0 auto;
+    padding: 69px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(250, 250, 250);
-    width: 80%;
-    margin: 20px auto;
     border-radius: 30px;
     box-shadow: 0 5px 10px rgb(45 34 60 / 12%);
 }
 
-img{
+main img{
     width: 100%;
-    margin: 0 auto 0 auto;
     border-radius: 30px;
     box-shadow: 0 5px 10px rgb(45 34 60 / 12%);
 }
@@ -49,6 +59,7 @@ img{
     line-height: 1.55;
     display: block;
     margin-top: 23px;
+    padding: 0 5% 0 5%;
 }
 
 #general{
@@ -56,18 +67,34 @@ img{
 }
 
 #infos{
-    margin: 0 15% 0 15%;
-    /* padding: 0 16px 0 16px;  */
-}
+    margin: 0 auto 0 auto;
+    width: fit-content;
 
+}
 
 #details{
     background-color: rgb(241, 241, 241);
 }
 
 #ingredients{
-    margin: 0 11% 0 19%;
-    padding: 50px 0 50px 0; 
+    margin: 0 auto 0 auto;
+    /* width: 29%; */
+    max-width: 900px;
+    width: 50%;
+    padding: 50px 0 50px 0;
+}
+
+#ingredients li{
+    list-style-type: circle;
+    line-height: 1.55;
+    /*TEMP*/
+  /*   list-style: none; */
+}
+
+#ingredients ul li::marker{  /*new pseudo element learned*/
+    color: orange;
+    font-size: 25px;  /*Trick for controlling the bullet size*/
+    line-height: normal;
 }
 
 .prepInfo{
@@ -77,19 +104,19 @@ img{
     padding: 0 0 10px;
 }
 
-ul{
-    line-height: 1.55;
+/* ul{
     margin-top: 15px;
-
-}
+} */
 
 #infos ul{
     list-style: none;
-    line-height: 2;
+    line-height: 2.3;
 }
 
 .icons{
     margin-right: 10px;
+    /*TEMP*/
+    /* display: none; */
 }
 
 .icon{
@@ -97,14 +124,172 @@ ul{
     vertical-align: middle;
 }
 
-li{
-    color: black;
-}
-
 footer{
     background-color: bisque;
+    justify-content: left;
+    display: flex;
+/*     align-items: flex-start; */
+    padding: 50px 23% 50px 23%;
+    column-gap: 10%;
+    flex-wrap: wrap;
+    line-height: 1.9;
 }
 
 #footerLinks{
     list-style: none;
+    font-weight: 700;
+    width: fit-content;
+    color: rgb(32, 27, 27);
+    margin-right: 10%;
+    
+}
+
+.map{
+    width: fit-content;
+}
+
+#footerLinks2{
+    list-style: none;
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-wrap: nowrap;
+    column-gap: 2rem;
+    color: rgb(32, 27, 27);
+}
+
+#signature{
+    width: fit-content;
+    font-style: italic;
+    font-size: 0.8rem;
+    text-wrap: nowrap;
+    color: rgb(160, 131, 97);
+    display: flex;
+    margin-left: auto;
+    align-self: flex-end;
+}
+
+/* -----------GRID------------- */
+
+/* .grid{
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+} */
+
+@media (min-width: 1920px ) {
+    #ingredients{
+        width: 35.7%;
+    }
+
+    footer{
+        padding: 50px 504px 50px 504px;
+    }
+    #footerLinks{
+        margin-right: 39px;   
+    }
+
+}
+
+
+@media (max-width: 1280px ) {
+    #ingredients{
+        width: 53.5%;
+    }
+
+    footer{
+        line-height: 2.5;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+    #footerLinks{
+        margin-right: 16px;   
+    }
+
+}
+
+@media (max-width: 840px ) {
+
+    footer{
+        line-height: 2.5;
+        justify-content: space-around;
+    }
+    #footerLinks{
+        margin-right: 16px;   
+    }
+    #signature{
+        display: none;
+    }
+
+}
+
+@media (max-width: 480px ) {
+    #ingredients{
+        width: 59.5%;
+    }
+
+    main{
+        padding: 36px;
+    }
+    header{
+        min-height: 80px;
+    }
+    p{
+        font-size: 0.9rem;
+    }
+    h1{
+        font-size: 1.84em;
+    }
+    li{
+        font-size: 0.94rem;
+    }
+
+    footer{
+        padding: 80px 45px 80px 45px;
+        flex-wrap: nowrap;
+        line-height: 2.5;
+        justify-content: space-around;
+    }
+    #footerLinks{
+        margin-right: 16px;   
+    }
+    #footerLinks2{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #signature{
+        display: none;
+    }
+
+}
+
+@media (max-width: 375px ) {
+    #ingredients{
+        width: 53.5%;
+    }
+
+    main{
+        padding: 28px;
+    }
+    header{
+        min-height: 80px;
+    }
+    p{
+        font-size: 0.9rem;
+    }
+    h1{
+        font-size: 1.84em;
+    }
+    li{
+        font-size: 0.94rem;
+    }
+    #signature{
+        display: none;
+    }
+
 }
