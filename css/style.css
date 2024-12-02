@@ -4,10 +4,14 @@
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Trebuchet MS', "Montserrat", Arial, sans-serif;
-    overflow-x: hidden;
+html{
     font-size: 16px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: 'Trebuchet MS', "Montserrat", Arial, sans-serif;
+}
+
+body{
     width: 100%;
     height: 100vh;
 }
@@ -35,26 +39,30 @@ a{
 main{
     display: flex;
     gap: 20px;
-    padding: 50px 10% 50px 10%;
     align-items: flex-start;
     flex-wrap: wrap;
+    padding: 50px 10% 50px 10%;
     
 }
 
 .recipe{
+    flex: 1 1 calc(50% - 20px); /* width and float control */
     background-color: rgb(250, 250, 250);
-    width: 50%;
     overflow: hidden;
     box-shadow: 0 5px 10px rgb(45 34 60 / 12%);
-    flex: 1 1 calc(50% - 10px);
+   
 }
 .cut{
     width: 100%;
     overflow: hidden;
     aspect-ratio: 16/9;
+    display: flex
+;
+    align-items: center;
 }
 .imageCap{
     width: 100%;
+    align-self: center;
 }
 
 #caption{
@@ -108,13 +116,97 @@ footer{
     color: rgb(32, 27, 27);
 }
 
-#signature{
-    width: fit-content;
-    font-style: italic;
-    font-size: 0.8rem;
-    text-wrap: nowrap;
-    color: rgb(160, 131, 97);
-    display: flex;
-    margin-left: auto;
-    align-self: flex-end;
+
+
+
+
+
+/* ////////-----MEDIA QUERIES------/////////// */
+
+/* @media (min-width: 1920px ) {
+
+
+} */
+
+
+@media (max-width: 1280px ) {
+
+    footer{
+        line-height: 2.5;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+    #footerLinks{
+        margin-right: 16px;   
+    }
+
+
+}
+
+ @media (max-width: 840px ) {
+
+    h2{
+        font-size: 1.1rem;
+    }
+
+    footer{
+        line-height: 2.5;
+        justify-content: center;
+        padding: 80px 45px 80px 45px;
+    }
+
+    #footerLinks{
+        margin-right: 16px;   
+    }
+
+} 
+
+@media (max-width: 540px ) {
+
+    #footerLinks2{
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+}
+
+@media (max-width: 480px ) {
+
+    h1{
+        font-size: 1.84em;
+    }
+
+    .recipe{
+        flex: 1 1 calc(100% - 20px);
+       
+    }
+
+    #footerLinks{
+        margin-right: 16px;
+        margin-bottom: 20px;  
+    }
+
+}
+
+@media (max-width: 375px ) {
+
+    h1{
+        font-size: 1.84em;
+    }
+
+    .recipe{
+        flex: 1 1 calc(100% - 20px);
+       
+    }
+
+    footer{
+        padding: 80px 69px 80px 69px;
+        justify-content: left;
+    }
+
+    #footerLinks2{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+
 }

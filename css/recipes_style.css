@@ -8,10 +8,13 @@
 html{
     font-size: 16px;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: 'Trebuchet MS', "Montserrat", Arial, sans-serif;
 }
 
 body{
-    font-family: 'Trebuchet MS', "Montserrat", Arial, sans-serif;
+    width: 100%;
+    height: 100vh;
 }
 
 a{
@@ -159,17 +162,6 @@ footer{
     color: rgb(32, 27, 27);
 }
 
-#signature{
-    width: fit-content;
-    font-style: italic;
-    font-size: 0.8rem;
-    text-wrap: nowrap;
-    color: rgb(160, 131, 97);
-    display: flex;
-    margin-left: auto;
-    align-self: flex-end;
-}
-
 /* -----------GRID------------- */
 
 /* .grid{
@@ -182,6 +174,11 @@ footer{
     height: 100%;
     gap: 10px;
 } */
+
+
+
+/* ////////-----MEDIA QUERIES------/////////// */
+
 
 @media (min-width: 1920px ) {
     #ingredients{
@@ -218,14 +215,11 @@ footer{
 
     footer{
         line-height: 2.5;
-        justify-content: space-around;
+        justify-content: center;
         padding: 80px 45px 80px 45px;
     }
     #footerLinks{
         margin-right: 16px;   
-    }
-    #signature{
-        display: none;
     }
 
 }
@@ -263,9 +257,6 @@ footer{
     #footerLinks2{
         grid-template-columns: repeat(1, 1fr);
     }
-    #signature{
-        display: none;
-    }
 
 }
 
@@ -289,7 +280,8 @@ footer{
     li{
         font-size: 0.94rem;
     }
-    #signature{
-        display: none;
+    ##footerLinks2{
+        grid-template-columns: repeat(1, 1fr);
     }
+    
 }
