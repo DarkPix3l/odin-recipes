@@ -180,7 +180,7 @@ footer{
 /* ////////-----MEDIA QUERIES------/////////// */
 
 
-@media (min-width: 1920px ) {
+@media (min-width: 1920px) {
     #ingredients{
         width: 35.7%;
     }
@@ -195,7 +195,7 @@ footer{
 }
 
 
-@media (max-width: 1280px ) {
+@media (max-width: 1280px) {
     #ingredients{
         width: 53.5%;
     }
@@ -211,7 +211,7 @@ footer{
 
 }
 
-@media (max-width: 840px ) {
+@media (max-width: 840px) {
 
     footer{
         line-height: 2.5;
@@ -224,7 +224,7 @@ footer{
 
 }
 
-@media (max-width: 480px ) {
+@media (max-width: 480px) {
     #ingredients{
         width: 59.5%;
     }
@@ -260,7 +260,7 @@ footer{
 
 }
 
-@media (max-width: 375px ) {
+@media (max-width: 375px) {
     #ingredients{
         width: 53.5%;
     }
@@ -280,7 +280,7 @@ footer{
     li{
         font-size: 0.94rem;
     }
-    ##footerLinks2{
+    #footerLinks2{
         grid-template-columns: repeat(1, 1fr);
     }
     
